@@ -4,14 +4,14 @@ group: dev
 language: android
 android:
   components:
-    - build-tools-20.0.0
-    - android-19
-    - android-7
+#    - build-tools-21.1.1
+#    - android-21
+#    - android-19
     - android-14
     - android-16
-  licenses:
-    - 'android\-sdk\-license\-.*'
+#  licenses:
+#    - 'android\-sdk\-license\-.*'
 script:
   - cd application
-  - android update project -p . --name Atomic --subprojects --target android-19
+  - android update project -p . --name Atomic --subprojects --target android-21
   - ant clean debug
